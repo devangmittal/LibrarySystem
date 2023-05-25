@@ -1,4 +1,4 @@
-package com.Library.book;
+package com.library.Book;
 
 public class Book {
 	private int bNO;
