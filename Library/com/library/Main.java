@@ -11,16 +11,16 @@ public class Main {
 	// Data Members
 	final String id;
 	final String pass;
-	List<Book> book;
-	List<Member> member;
+	List<Book> books;
+	List<Member> members;
 	Scanner sc;
 
 	// Constructor of Main class.
 	Main() {
 		this.id = "devang";
 		this.pass = "mittal";
-		book = new ArrayList<Book>();
-		member = new ArrayList<Member>();
+		books = new ArrayList<Book>();
+		members = new ArrayList<Member>();
 		sc = new Scanner(System.in);
 
 	}
