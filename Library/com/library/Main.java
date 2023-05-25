@@ -116,6 +116,11 @@ public class Main {
 		}
 	}
 
+	// Display all Books in Library.
+	void showBooks() {
+
+	}
+
 	public static void main(String[] args) {
 		// Create object of Main class.
 		Main m = new Main();
@@ -145,7 +150,7 @@ public class Main {
 
 					} else if (choiceForAdminWindow == 6) {
 					} else if (choiceForAdminWindow == 7) {
-
+						m.showBooks();
 					} else if (choiceForAdminWindow == 8) {
 					} else {
 						System.out.println("Thank you for using our Library System Admin Window.");
