@@ -118,7 +118,9 @@ public class Main {
 
 	// Display all Books in Library.
 	void showBooks() {
-
+		for (Book b : books) {
+			System.out.println(b.toString());
+		}
 	}
 
 	public static void main(String[] args) {
