@@ -1,19 +1,26 @@
 package com.library;
 
 // Import 
-import com.library.*;
+import com.library.Book.Book;
+import com.library.Member.Member;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 	// Data Members
 	final String id;
 	final String pass;
+	List<Book> book;
+	List<Member> member;
 	Scanner sc;
 
 	// Constructor of Main class.
 	Main() {
 		this.id = "devang";
 		this.pass = "mittal";
+		book = new ArrayList<Book>();
+		member = new ArrayList<Member>();
 		sc = new Scanner(System.in);
 
 	}
