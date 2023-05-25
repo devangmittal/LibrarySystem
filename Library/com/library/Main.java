@@ -88,6 +88,11 @@ public class Main {
 		return -1;
 	}
 
+	// Add a book object to books arraylist.
+	void addBook() {
+
+	}
+
 	public static void main(String[] args) {
 		// Create object of Main class.
 		Main m = new Main();
