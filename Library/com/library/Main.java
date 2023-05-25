@@ -72,7 +72,15 @@ public class Main {
 			System.out.println("User ID and password does not match.");
 			System.out.println("Thank you for using out Library services.");
 		} else {
+			while (true) {
+				int choice = m.displayAdminUserOption();
+				if (choice == 1) {
 
+				} else if (choice == 2) {
+				} else {
+					break;
+				}
+			}
 		}
 
 	}
