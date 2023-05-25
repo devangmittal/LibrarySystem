@@ -100,7 +100,22 @@ public class Main {
 				int choiceForAdminAndUser = m.displayAdminUserOption();
 				if (choiceForAdminAndUser == 1) {
 					int choiceForAdminWindow = m.displayAdminWindow();
+					if (choiceForAdminWindow == 1) {
 
+					} else if (choiceForAdminWindow == 2) {
+					} else if (choiceForAdminWindow == 3) {
+
+					} else if (choiceForAdminWindow == 4) {
+					} else if (choiceForAdminWindow == 5) {
+
+					} else if (choiceForAdminWindow == 6) {
+					} else if (choiceForAdminWindow == 7) {
+
+					} else if (choiceForAdminWindow == 8) {
+					} else {
+						System.out.println("Thank you for using our Library System Admin Window.");
+						break;
+					}
 				} else if (choiceForAdminAndUser == 2) {
 				} else {
 					System.out.println("Thank you for Visiting Us.");
