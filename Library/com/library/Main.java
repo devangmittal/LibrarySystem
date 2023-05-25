@@ -90,7 +90,30 @@ public class Main {
 
 	// Add a book object to books arraylist.
 	void addBook() {
-
+		int bNo;
+		int qty;
+		String bName;
+		String genre;
+		try {
+			System.out.println("Enter Book Number: ");
+			bNo = sc.nextInt();
+			System.out.println("Enter Qty: ");
+			qty = sc.nextInt();
+			System.out.println("Enter Book Name: ");
+			sc.nextLine();
+			bName = sc.nextLine();
+			System.out.println("Enter Book Genre");
+			genre = sc.nextLine();
+			Book b = new Book(bNo, qty, bName, genre);
+			boolean flag = books.add(b);
+			if (flag) {
+				System.out.println("Book Added successfully.");
+			} else {
+				System.out.println("Please provide valid input.");
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	public static void main(String[] args) {
@@ -113,7 +136,7 @@ public class Main {
 				if (choiceForAdminAndUser == 1) {
 					int choiceForAdminWindow = m.displayAdminWindow();
 					if (choiceForAdminWindow == 1) {
-
+						m.addBook();
 					} else if (choiceForAdminWindow == 2) {
 					} else if (choiceForAdminWindow == 3) {
 
