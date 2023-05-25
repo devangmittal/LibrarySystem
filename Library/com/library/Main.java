@@ -95,12 +95,15 @@ public class Main {
 			System.out.println("User ID and password does not match.");
 			System.out.println("Thank you for using out Library services.");
 		} else {
+			System.out.println("Hello.");
 			while (true) {
 				int choiceForAdminAndUser = m.displayAdminUserOption();
 				if (choiceForAdminAndUser == 1) {
 					int choiceForAdminWindow = m.displayAdminWindow();
+
 				} else if (choiceForAdminAndUser == 2) {
 				} else {
+					System.out.println("Thank you for Visiting Us.");
 					break;
 				}
 			}
