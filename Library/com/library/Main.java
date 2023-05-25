@@ -143,6 +143,7 @@ public class Main {
 				if (choiceForAdminAndUser == 1) {
 					int choiceForAdminWindow = m.displayAdminWindow();
 					if (choiceForAdminWindow == 1) {
+						// Add book to books list.
 						m.addBook();
 					} else if (choiceForAdminWindow == 2) {
 					} else if (choiceForAdminWindow == 3) {
@@ -152,6 +153,7 @@ public class Main {
 
 					} else if (choiceForAdminWindow == 6) {
 					} else if (choiceForAdminWindow == 7) {
+						// display all books in book list.
 						m.showBooks();
 					} else if (choiceForAdminWindow == 8) {
 					} else {
