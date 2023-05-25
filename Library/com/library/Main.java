@@ -40,6 +40,24 @@ public class Main {
 		return false;
 	}
 
+	// Display option for admin window or user window.
+	// returns the selected option.
+	int displayAdminUserOption() {
+		int choice;
+		System.out.println("Choose an option to continue: ");
+		System.out.println("Press 1 for Admin Window.");
+		System.out.println("Press 2 for User Window.");
+		System.out.println("Press any other key to Exit our Library.");
+		try {
+			choice = sc.nextInt();
+			return choice;
+		} catch (Exception e) {
+			System.out.println("Please type integer only");
+		}
+		return -1;
+
+	}
+
 	public static void main(String[] args) {
 		// Create object of Main class.
 		Main m = new Main();
