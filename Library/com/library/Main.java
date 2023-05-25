@@ -40,7 +40,7 @@ public class Main {
 		return false;
 	}
 
-	// Display option for admin window or user window.
+	// Methhod to Display option for admin window or user window.
 	// returns the selected option.
 	int displayAdminUserOption() {
 		int choice;
@@ -56,6 +56,29 @@ public class Main {
 		}
 		return -1;
 
+	}
+
+	// Method to display Admin window.
+	// Returns int.
+	int displayAdminWindow() {
+		int choice;
+		System.out.println("Choose an option to continue: ");
+		System.out.println("Press 1 to Add a book in Library.");
+		System.out.println("Press 2 to Add a Member in Library.");
+		System.out.println("Press 3 to Remove a Book from Library.");
+		System.out.println("Press 4 to Remove a Member from Library.");
+		System.out.println("Press 5 to Update a Book from Library.");
+		System.out.println("Press 6 to Update a Member from Library.");
+		System.out.println("Press 7 to Show all Books available in Library.");
+		System.out.println("Press 8 to Show all Members of Library.");
+		System.out.println("Press any other key to Exit our Library.");
+		try {
+			choice = sc.nextInt();
+			return choice;
+		} catch (Exception e) {
+			System.out.println("Please type integer only");
+		}
+		return -1;
 	}
 
 	public static void main(String[] args) {
