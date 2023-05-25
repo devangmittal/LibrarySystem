@@ -96,10 +96,10 @@ public class Main {
 			System.out.println("Thank you for using out Library services.");
 		} else {
 			while (true) {
-				int choice = m.displayAdminUserOption();
-				if (choice == 1) {
-
-				} else if (choice == 2) {
+				int choiceForAdminAndUser = m.displayAdminUserOption();
+				if (choiceForAdminAndUser == 1) {
+					int choiceForAdminWindow = m.displayAdminWindow();
+				} else if (choiceForAdminAndUser == 2) {
 				} else {
 					break;
 				}
