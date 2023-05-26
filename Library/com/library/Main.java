@@ -473,6 +473,8 @@ public class Main {
 						// Issue a Book.
 						m.issueBook();
 					} else if (choiceForUserWindow == 2) {
+						// Return a Book.
+						m.returnBook();
 					} else {
 						System.out.println("Thank you for using our Library System Admin Window.");
 						break;
