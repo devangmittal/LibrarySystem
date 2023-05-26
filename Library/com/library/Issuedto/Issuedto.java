@@ -4,14 +4,14 @@ import com.library.Book.Book;
 import com.library.Member.Member;
 
 public class Issuedto {
-	Member m;
-	Book b;
+	private Member m;
+	private Book b;
 
-	Issuedto() {
+	public Issuedto() {
 
 	}
 
-	Issuedto(Member m, Book b) {
+	public Issuedto(Member m, Book b) {
 		this.m = m;
 		this.b = b;
 	}
