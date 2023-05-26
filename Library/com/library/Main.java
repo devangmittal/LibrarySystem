@@ -300,21 +300,30 @@ public class Main {
 	void updateMember() {
 		System.out.println("To Update a Member from Library enter Member Name or Member ID: ");
 		Member m = searchMember();
+		boolean flag = true;
 		if (m != null) {
-			System.out.println("Enter Member Updated Name: ");
-			String name = sc.nextLine();
-			System.out.println("Enter Member Updated Email: ");
-			String email = sc.nextLine();
-			System.out.println("Enter Member Updated Fee: ");
-			double fee = sc.nextDouble();
-			System.out.println("Enter Member Updated Fine: ");
-			double fine = sc.nextDouble();
-			m.setName(name);
-			m.setEmail(email);
-			m.setFee(fee);
-			m.setFine(fine);
-
-			System.out.println("Member Updated");
+			try {
+				System.out.println("Enter Member Updated Name: ");
+				String name = sc.nextLine();
+				System.out.println("Enter Member Updated Email: ");
+				String email = sc.nextLine();
+				System.out.println("Enter Member Updated Fee: ");
+				double fee = sc.nextDouble();
+				System.out.println("Enter Member Updated Fine: ");
+				double fine = sc.nextDouble();
+				m.setName(name);
+				m.setEmail(email);
+				m.setFee(fee);
+				m.setFine(fine);
+			} catch (Exception e) {
+				flag = false;
+			}
+			if (flag) {
+				System.out.println("Member Updated");
+			} else {
+				// if any error in updating Member object Display error.
+				System.out.println("Cannot update Member Please provide valid input.");
+			}
 		}
 	}
 
