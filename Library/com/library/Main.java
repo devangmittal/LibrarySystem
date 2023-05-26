@@ -358,6 +358,11 @@ public class Main {
 		}
 	}
 
+	// Issue a Book to a member.
+	void issueBook() {
+
+	}
+
 	public static void main(String[] args) {
 		// Create object of Main class.
 		Main m = new Main();
