@@ -18,7 +18,7 @@ public class Issuedto {
 
 	@Override
 	public String toString() {
-		return "Issuedto [Member = " + m.toString() + ", Book =" + b.toString() + "]";
+		return "Issuedto [Member = " + m.getName() + ", Book =" + b.getbName() + "]";
 	}
 
 }
