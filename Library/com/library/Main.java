@@ -211,9 +211,9 @@ public class Main {
 		}
 	}
 
-	// Remove a member from member list.
-	void removeMember() {
-		System.out.println("To remove a Member from Library enter Member Name or Member ID: ");
+	// search a Book.
+	// returns a book object if found.
+	Member searchMember() {
 		sc.nextLine();
 		String choice = sc.nextLine();
 		if (isNumeric(choice)) {
@@ -228,11 +228,11 @@ public class Main {
 				}
 			}
 			if (flag) {
-				members.remove(tMember);
-				System.out.println("Member removed.");
+				return tMember;
 			} else {
 				System.out.println("Member ID not found.");
 				System.out.println("Please enter a valid Member ID.");
+				return null;
 			}
 		} else {
 			Member tMember = new Member();
@@ -245,12 +245,22 @@ public class Main {
 				}
 			}
 			if (flag) {
-				members.remove(tMember);
-				System.out.println("Member removed.");
+				return tMember;
 			} else {
 				System.out.println("Member name not found.");
 				System.out.println("Please enter a valid Member Name.");
+				return null;
 			}
+		}
+	}
+
+	// Remove a member from member list.
+	void removeMember() {
+		System.out.println("To remove a Member from Library enter Member Name or Member ID: ");
+		Member m = searchMember();
+		if (m != null) {
+			members.remove(m);
+			System.out.println("Member removed");
 		}
 	}
 
