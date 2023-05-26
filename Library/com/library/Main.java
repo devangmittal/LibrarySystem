@@ -360,11 +360,19 @@ public class Main {
 
 	// Issue a Book to a member.
 	void issueBook() {
+		boolean flag = true;
 		System.out.println("Enter Book ID or Book Name to be Issued.");
 		Book b = searchBook();
+		if (b == null) {
+			return;
+		}
 		System.out.println("Enter Member ID or Member Name to whom Book will be Issued.");
 		Member m = searchMember();
-		if (b != null && m != null) {
+		if (m == null) {
+			return;
+		}
+
+		try {
 			if (b.getQty() > 0) {
 				b.setQtyI(b.getQtyI() + 1);
 				b.setQty(b.getQty() - 1);
@@ -372,7 +380,13 @@ public class Main {
 				System.out.println("Cannot issue this book.");
 				System.out.println("This book is not available right now.");
 			}
+		} catch (Exception e) {
+			flag = false;
 		}
+		if (flag) {
+			System.out.println("Book Issued.");
+		}
+
 	}
 
 	public static void main(String[] args) {
@@ -424,7 +438,8 @@ public class Main {
 				} else if (choiceForAdminAndUser == 2) {
 					int choiceForUserWindow = m.displayUserWindow();
 					if (choiceForUserWindow == 1) {
-
+						// Issue a Book.
+						m.issueBook();
 					} else if (choiceForUserWindow == 2) {
 					} else {
 						System.out.println("Thank you for using our Library System Admin Window.");
