@@ -269,6 +269,28 @@ public class Main {
 
 	}
 
+	// Update Member
+	void updateMember() {
+		System.out.println("To remove a Member from Library enter Member Name or Member ID: ");
+		Member m = searchMember();
+		if (m != null) {
+			System.out.println("Enter Member Updated Name: ");
+			String name = sc.nextLine();
+			System.out.println("Enter Member Updated Email: ");
+			String email = sc.nextLine();
+			System.out.println("Enter Member Updated Fee: ");
+			double fee = sc.nextDouble();
+			System.out.println("Enter Member Updated Fine: ");
+			double fine = sc.nextDouble();
+			m.setName(name);
+			m.setEmail(email);
+			m.setFee(fee);
+			m.setFine(fine);
+
+			System.out.println("Member Updated");
+		}
+	}
+
 	// Display all Books in Library.
 	void showBooks() {
 		for (Book b : books) {
@@ -318,6 +340,7 @@ public class Main {
 					} else if (choiceForAdminWindow == 5) {
 						m.updateBook();
 					} else if (choiceForAdminWindow == 6) {
+						m.updateMember();
 					} else if (choiceForAdminWindow == 7) {
 						// display all books in book list.
 						m.showBooks();
