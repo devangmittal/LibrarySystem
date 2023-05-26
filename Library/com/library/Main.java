@@ -158,6 +158,11 @@ public class Main {
 		return true;
 	}
 
+	// Remove a book from books list
+	void removeBook() {
+
+	}
+
 	// Display all Books in Library.
 	void showBooks() {
 		for (Book b : books) {
