@@ -161,6 +161,7 @@ public class Main {
 	// Remove a book from books list
 	void removeBook() {
 		System.out.println("To remove a Book enter Book Name or Book ID: ");
+		sc.nextLine();
 		String choice = sc.nextLine();
 		if (isNumeric(choice)) {
 			int bookNo = Integer.parseInt(choice);
@@ -175,6 +176,7 @@ public class Main {
 			}
 			if (flag) {
 				books.remove(tBook);
+				System.out.println("Book removed.");
 			} else {
 				System.out.println("Book ID not found.");
 				System.out.println("Please enter a valid Book ID.");
@@ -191,6 +193,7 @@ public class Main {
 			}
 			if (flag) {
 				books.remove(tBook);
+				System.out.println("Book removed.");
 			} else {
 				System.out.println("Book name not found.");
 				System.out.println("Please enter a valid Book Name.");
