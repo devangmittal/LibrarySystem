@@ -393,12 +393,12 @@ public class Main {
 	void returnBook() {
 		boolean flag = true;
 
-		System.out.println("Enter Member ID or Member Name to whom Book will be Issued.");
+		System.out.println("Enter Member ID or Member Name who is returning the Book.");
 		Member m = searchMember();
 		if (m == null) {
 			return;
 		}
-		System.out.println("Enter Book ID or Book Name to be Issued.");
+		System.out.println("Enter Book ID or Book Name to be returned.");
 		Book b = searchBook();
 		if (b == null) {
 			return;
@@ -410,13 +410,13 @@ public class Main {
 				b.setQtyI(b.getQtyI() - 1);
 			} else {
 				System.out.println("Cannot Return this book.");
-				System.out.println("This book is not fromm our Library.");
+				System.out.println("This book is not from our Library.");
 			}
 		} catch (Exception e) {
 			flag = false;
 		}
 		if (flag) {
-			System.out.println("Book Issued.");
+			System.out.println("Book Returned.");
 		}
 
 	}
