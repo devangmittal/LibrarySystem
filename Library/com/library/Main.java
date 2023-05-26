@@ -225,7 +225,22 @@ public class Main {
 				System.out.println("Please enter a valid Book ID.");
 			}
 		} else {
-
+			Member tMember = new Member();
+			boolean flag = false;
+			for (Member m : members) {
+				if (m.getName().equals(choice)) {
+					tMember = m;
+					flag = true;
+					break;
+				}
+			}
+			if (flag) {
+				members.remove(tMember);
+				System.out.println("Member removed.");
+			} else {
+				System.out.println("Member name not found.");
+				System.out.println("Please enter a valid Member Name.");
+			}
 		}
 	}
 
