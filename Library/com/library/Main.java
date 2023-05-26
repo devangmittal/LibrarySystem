@@ -160,7 +160,27 @@ public class Main {
 
 	// Remove a book from books list
 	void removeBook() {
+		System.out.println("To remove a Book enter Book Name or Book ID: ");
+		String choice = sc.nextLine();
+		if (isNumeric(choice)) {
+			int bookNo = Integer.parseInt(choice);
+			Book tBook = new Book();
+			boolean flag = false;
+			for (Book b : books) {
+				if (b.getbNO() == bookNo) {
+					tBook = b;
+					flag = true;
+					break;
+				}
+			}
+			if (flag) {
+				books.remove(tBook);
+			} else {
+				System.out.println("Please enter a valid Book ID.");
+			}
+		} else {
 
+		}
 	}
 
 	// Display all Books in Library.
