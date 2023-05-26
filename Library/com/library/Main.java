@@ -88,6 +88,23 @@ public class Main {
 		return -1;
 	}
 
+	// Method to display User window.
+	// Returns int.
+	int displayUserWindow() {
+		int choice;
+		System.out.println("Choose an option to continue: ");
+		System.out.println("Press 1 to Issue a book in Library.");
+		System.out.println("Press 2 to Return a Book in Library.");
+		System.out.println("Press any other key to Exit our Library.");
+		try {
+			choice = sc.nextInt();
+			return choice;
+		} catch (Exception e) {
+			System.out.println("Please type integer only");
+		}
+		return -1;
+	}
+
 	// Add a book object to books arraylist.
 	void addBook() {
 		int bNo;
@@ -388,6 +405,14 @@ public class Main {
 						break;
 					}
 				} else if (choiceForAdminAndUser == 2) {
+					int choiceForUserWindow = m.displayUserWindow();
+					if (choiceForUserWindow == 1) {
+
+					} else if (choiceForUserWindow == 2) {
+					} else {
+						System.out.println("Thank you for using our Library System Admin Window.");
+						break;
+					}
 				} else {
 					System.out.println("Thank you for Visiting Us.");
 					break;
