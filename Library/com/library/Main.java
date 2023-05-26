@@ -176,6 +176,7 @@ public class Main {
 			if (flag) {
 				books.remove(tBook);
 			} else {
+				System.out.println("Book ID not found.");
 				System.out.println("Please enter a valid Book ID.");
 			}
 		} else {
