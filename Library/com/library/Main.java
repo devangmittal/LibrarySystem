@@ -271,7 +271,7 @@ public class Main {
 
 	// Update Member
 	void updateMember() {
-		System.out.println("To remove a Member from Library enter Member Name or Member ID: ");
+		System.out.println("To Update a Member from Library enter Member Name or Member ID: ");
 		Member m = searchMember();
 		if (m != null) {
 			System.out.println("Enter Member Updated Name: ");
