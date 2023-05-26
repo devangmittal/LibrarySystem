@@ -360,7 +360,19 @@ public class Main {
 
 	// Issue a Book to a member.
 	void issueBook() {
-
+		System.out.println("Enter Book ID or Book Name to be Issued.");
+		Book b = searchBook();
+		System.out.println("Enter Member ID or Member Name to whom Book will be Issued.");
+		Member m = searchMember();
+		if (b != null && m != null) {
+			if (b.getQty() > 0) {
+				b.setQtyI(b.getQtyI() + 1);
+				b.setQty(b.getQty() - 1);
+			} else {
+				System.out.println("Cannot issue this book.");
+				System.out.println("This book is not available right now.");
+			}
+		}
 	}
 
 	public static void main(String[] args) {
