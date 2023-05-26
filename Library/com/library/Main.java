@@ -391,6 +391,33 @@ public class Main {
 
 	// Return a Book to Library.
 	void returnBook() {
+		boolean flag = true;
+
+		System.out.println("Enter Member ID or Member Name to whom Book will be Issued.");
+		Member m = searchMember();
+		if (m == null) {
+			return;
+		}
+		System.out.println("Enter Book ID or Book Name to be Issued.");
+		Book b = searchBook();
+		if (b == null) {
+			return;
+		}
+
+		try {
+			if (b.getQtyI() > 0) {
+				b.setQty(b.getQty() + 1);
+				b.setQtyI(b.getQtyI() - 1);
+			} else {
+				System.out.println("Cannot Return this book.");
+				System.out.println("This book is not fromm our Library.");
+			}
+		} catch (Exception e) {
+			flag = false;
+		}
+		if (flag) {
+			System.out.println("Book Issued.");
+		}
 
 	}
 
