@@ -288,6 +288,8 @@ public class Main {
 						// Remove a Book from books list.
 						m.removeBook();
 					} else if (choiceForAdminWindow == 4) {
+						// Remove a Member from members list.
+						m.removeMember();
 					} else if (choiceForAdminWindow == 5) {
 
 					} else if (choiceForAdminWindow == 6) {
