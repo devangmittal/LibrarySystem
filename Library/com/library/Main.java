@@ -203,7 +203,30 @@ public class Main {
 
 	// Remove a member from member list.
 	void removeMember() {
+		System.out.println("To remove a Member from Library enter Member Name or Member ID: ");
+		sc.nextLine();
+		String choice = sc.nextLine();
+		if (isNumeric(choice)) {
+			int mId = Integer.parseInt(choice);
+			Member tMember = new Member();
+			boolean flag = false;
+			for (Member m : members) {
+				if (m.getmId() == mId) {
+					tMember = m;
+					flag = true;
+					break;
+				}
+			}
+			if (flag) {
+				members.remove(tMember);
+				System.out.println("Member removed.");
+			} else {
+				System.out.println("Book ID not found.");
+				System.out.println("Please enter a valid Book ID.");
+			}
+		} else {
 
+		}
 	}
 
 	// Display all Books in Library.
