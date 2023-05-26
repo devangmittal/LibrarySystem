@@ -179,7 +179,21 @@ public class Main {
 				System.out.println("Please enter a valid Book ID.");
 			}
 		} else {
-
+			Book tBook = new Book();
+			boolean flag = false;
+			for (Book b : books) {
+				if (b.getbName().equals(choice)) {
+					tBook = b;
+					flag = true;
+					break;
+				}
+			}
+			if (flag) {
+				books.remove(tBook);
+			} else {
+				System.out.println("Book name not found.");
+				System.out.println("Please enter a valid Book Name.");
+			}
 		}
 	}
 
