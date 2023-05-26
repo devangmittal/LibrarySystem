@@ -144,6 +144,20 @@ public class Main {
 		}
 	}
 
+	// check is a string is numeric or not.
+	// return true if string is numeric.
+	boolean isNumeric(String strNum) {
+		if (strNum == null) {
+			return false;
+		}
+		try {
+			int i = Integer.parseInt(strNum);
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
+	}
+
 	// Display all Books in Library.
 	void showBooks() {
 		for (Book b : books) {
