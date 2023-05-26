@@ -150,6 +150,13 @@ public class Main {
 		}
 	}
 
+	// Display all Members of Library.
+	void showMembers() {
+		for (Member m : members) {
+			System.out.println(m.toString());
+		}
+	}
+
 	public static void main(String[] args) {
 		// Create object of Main class.
 		Main m = new Main();
@@ -173,6 +180,8 @@ public class Main {
 						// Add book to books list.
 						m.addBook();
 					} else if (choiceForAdminWindow == 2) {
+						// Add member in members list.
+						m.addMember();
 					} else if (choiceForAdminWindow == 3) {
 
 					} else if (choiceForAdminWindow == 4) {
@@ -183,6 +192,8 @@ public class Main {
 						// display all books in book list.
 						m.showBooks();
 					} else if (choiceForAdminWindow == 8) {
+						// display all Members of Library.
+						m.showMembers();
 					} else {
 						System.out.println("Thank you for using our Library System Admin Window.");
 						break;
