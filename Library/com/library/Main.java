@@ -158,9 +158,9 @@ public class Main {
 		return true;
 	}
 
-	// Remove a book from books list
-	void removeBook() {
-		System.out.println("To remove a Book enter Book Name or Book ID: ");
+	// search a Book.
+	// returns a book object if found.
+	Book searchBook() {
 		sc.nextLine();
 		String choice = sc.nextLine();
 		if (isNumeric(choice)) {
@@ -175,11 +175,11 @@ public class Main {
 				}
 			}
 			if (flag) {
-				books.remove(tBook);
-				System.out.println("Book removed.");
+				return tBook;
 			} else {
 				System.out.println("Book ID not found.");
 				System.out.println("Please enter a valid Book ID.");
+				return null;
 			}
 		} else {
 			Book tBook = new Book();
@@ -192,12 +192,22 @@ public class Main {
 				}
 			}
 			if (flag) {
-				books.remove(tBook);
-				System.out.println("Book removed.");
+				return tBook;
 			} else {
 				System.out.println("Book name not found.");
 				System.out.println("Please enter a valid Book Name.");
+				return null;
 			}
+		}
+	}
+
+	// Remove a book from books list
+	void removeBook() {
+		System.out.println("To remove a Book enter Book Name or Book ID: ");
+		Book b = searchBook();
+		if (b != null) {
+			books.remove(b);
+			System.out.println("Book removed");
 		}
 	}
 
@@ -296,7 +306,7 @@ public class Main {
 						// Remove a Member from members list.
 						m.removeMember();
 					} else if (choiceForAdminWindow == 5) {
-
+						m.updateBook();
 					} else if (choiceForAdminWindow == 6) {
 					} else if (choiceForAdminWindow == 7) {
 						// display all books in book list.
