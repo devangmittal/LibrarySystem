@@ -266,7 +266,33 @@ public class Main {
 
 	// Update Book
 	void updateBook() {
-
+		System.out.println("To Update a Book from Library enter Book Name or Book ID: ");
+		Book b = searchBook();
+		boolean flag = true;
+		if (b != null) {
+			try {
+				System.out.println("Enter Book Updated ID: ");
+				int bNO = sc.nextInt();
+				System.out.println("Enter Book Updated Qty: ");
+				int qty = sc.nextInt();
+				System.out.println("Enter Book Updated Name: ");
+				String bName = sc.nextLine();
+				System.out.println("Enter Book Updated Genre: ");
+				String genre = sc.nextLine();
+				b.setbNO(bNO);
+				b.setQty(qty);
+				b.setbName(bName);
+				b.setGenre(genre);
+			} catch (Exception e) {
+				flag = false;
+			}
+			if (flag) {
+				System.out.println("Book Updated.");
+			} else {
+				// if any error in updating book object Display error.
+				System.out.println("Cannot update book Please provide valid input.");
+			}
+		}
 	}
 
 	// Update Member
