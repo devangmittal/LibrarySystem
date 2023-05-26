@@ -276,6 +276,7 @@ public class Main {
 				System.out.println("Enter Book Updated Qty: ");
 				int qty = sc.nextInt();
 				System.out.println("Enter Book Updated Name: ");
+				sc.nextLine();
 				String bName = sc.nextLine();
 				System.out.println("Enter Book Updated Genre: ");
 				String genre = sc.nextLine();
