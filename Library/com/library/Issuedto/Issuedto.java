@@ -7,6 +7,10 @@ public class Issuedto {
 	Member m;
 	Book b;
 
+	Issuedto() {
+
+	}
+
 	Issuedto(Member m, Book b) {
 		this.m = m;
 		this.b = b;
