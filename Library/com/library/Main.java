@@ -116,6 +116,33 @@ public class Main {
 		}
 	}
 
+	// Add a member object to members list.
+	void addMember() {
+		String name;
+		String email;
+		double fee;
+		double fine;
+		try {
+			System.out.println("Enter Member Name: ");
+			name = sc.nextLine();
+			System.out.println("Enter Member Email Address: ");
+			email = sc.nextLine();
+			System.out.println("Enter Member Fee: ");
+			fee = sc.nextDouble();
+			System.out.println("Enter Fine: ");
+			fine = sc.nextDouble();
+			Member m = new Member(name, email, fee, fine);
+			boolean flag = members.add(m);
+			if (flag) {
+				System.out.println("Member Added successfully.");
+			} else {
+				System.out.println("Please provide valid input.");
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
 	// Display all Books in Library.
 	void showBooks() {
 		for (Book b : books) {
