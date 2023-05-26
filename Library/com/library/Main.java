@@ -239,7 +239,8 @@ public class Main {
 						// Add member in members list.
 						m.addMember();
 					} else if (choiceForAdminWindow == 3) {
-
+						// Remove a Book from books list.
+						m.removeBook();
 					} else if (choiceForAdminWindow == 4) {
 					} else if (choiceForAdminWindow == 5) {
 
