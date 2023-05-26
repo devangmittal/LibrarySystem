@@ -171,6 +171,7 @@ public class Main {
 			System.out.println("User ID and password does not match.");
 			System.out.println("Thank you for using out Library services.");
 		} else {
+			System.out.println("==============================");
 			System.out.println("Hello.");
 			while (true) {
 				int choiceForAdminAndUser = m.displayAdminUserOption();
