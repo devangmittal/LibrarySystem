@@ -124,6 +124,7 @@ public class Main {
 		double fine;
 		try {
 			System.out.println("Enter Member Name: ");
+			sc.nextLine();
 			name = sc.nextLine();
 			System.out.println("Enter Member Email Address: ");
 			email = sc.nextLine();
