@@ -201,6 +201,11 @@ public class Main {
 		}
 	}
 
+	// Remove a member from member list.
+	void removeMember() {
+
+	}
+
 	// Display all Books in Library.
 	void showBooks() {
 		for (Book b : books) {
