@@ -221,8 +221,8 @@ public class Main {
 				members.remove(tMember);
 				System.out.println("Member removed.");
 			} else {
-				System.out.println("Book ID not found.");
-				System.out.println("Please enter a valid Book ID.");
+				System.out.println("Member ID not found.");
+				System.out.println("Please enter a valid Member ID.");
 			}
 		} else {
 			Member tMember = new Member();
