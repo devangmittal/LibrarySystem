@@ -2,6 +2,7 @@ package com.library;
 
 // Import 
 import com.library.Book.Book;
+import com.library.Issuedto.Issuedto;
 import com.library.Member.Member;
 import java.util.ArrayList;
 import java.util.List;
@@ -376,6 +377,8 @@ public class Main {
 			if (b.getQty() > 0) {
 				b.setQtyI(b.getQtyI() + 1);
 				b.setQty(b.getQty() - 1);
+				Issuedto i = new Issuedto(m, b);
+				System.out.println(i.toString());
 			} else {
 				System.out.println("Cannot issue this book.");
 				System.out.println("This book is not available right now.");
